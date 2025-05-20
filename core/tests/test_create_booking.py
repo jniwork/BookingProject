@@ -108,7 +108,7 @@ def test_create_booking_without_firstname(api_client, booking_dates):
 
 @allure.feature("Test create booking")
 @allure.story("Negative: creating booking without lastname")
-def test_create_booking_without_firstname(api_client, booking_dates):
+def test_create_booking_without_lastname(api_client, booking_dates):
     faker = Faker()
     booking_data = {
         "firstname": faker.first_name(),
@@ -125,7 +125,7 @@ def test_create_booking_without_firstname(api_client, booking_dates):
 
 @allure.feature("Test create booking")
 @allure.story("Negative: creating booking without totalprice")
-def test_create_booking_without_firstname(api_client, booking_dates):
+def test_create_booking_without_totalprice(api_client, booking_dates):
     faker = Faker()
     booking_data = {
         "firstname": faker.first_name(),
@@ -142,7 +142,7 @@ def test_create_booking_without_firstname(api_client, booking_dates):
 
 @allure.feature("Test create booking")
 @allure.story("Negative: creating booking without depositpaid")
-def test_create_booking_without_firstname(api_client, booking_dates):
+def test_create_booking_without_depositpaid(api_client, booking_dates):
     faker = Faker()
     booking_data = {
         "firstname": faker.first_name(),
@@ -159,7 +159,7 @@ def test_create_booking_without_firstname(api_client, booking_dates):
 
 @allure.feature("Test create booking")
 @allure.story("Negative: creating booking without bookingdates")
-def test_create_booking_without_firstname(api_client, booking_dates):
+def test_create_booking_without_bookingdates(api_client, booking_dates):
     faker = Faker()
     booking_data = {
         "firstname": faker.first_name(),
