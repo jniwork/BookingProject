@@ -129,7 +129,7 @@ class APIClient:
     def partial_update_booking(self, booking_id, booking_data):
         with allure.step("Partial update booking"):
             url = f"{self.base_url}{Endpoints.BOOKING_ENDPOINT.value}/{booking_id}"
-            response = self.session.put(url, auth=HTTPBasicAuth(Users.USERNAME.value, Users.PASSWORD.value), json=booking_data,
+            response = self.session.patch(url, auth=HTTPBasicAuth(Users.USERNAME.value, Users.PASSWORD.value), json=booking_data,
                                         timeout=Timeouts.TIMEOUT.value)
             response.raise_for_status()
 
