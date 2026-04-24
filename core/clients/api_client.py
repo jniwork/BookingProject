@@ -12,7 +12,7 @@ load_dotenv()
 
 class APIClient:
     def __init__(self):
-        environment_str = os.getenv("ENVIRONMENT")
+        environment_str = os.getenv("ENVIRONMENT", "PROD")
         try:
             environment = Environment[environment_str]
         except KeyError:
