@@ -29,7 +29,7 @@ def test_create_booking_with_custom_data(api_client):
     assert response["booking"]["additionalneeds"] == booking_data["additionalneeds"]
 
 
-def test_create_booking_with_random_data(api_client, generate_random_booking_data, booking_dates):
+def test_create_booking_with_random_data(api_client, generate_random_booking_data):
     booking_data = generate_random_booking_data
 
     response = api_client.create_booking(booking_data)
